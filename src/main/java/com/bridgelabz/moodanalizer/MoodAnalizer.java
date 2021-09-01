@@ -6,6 +6,9 @@ public class MoodAnalizer {
 
 	public String analyseMood (String msg) throws MoodAnalyzerException {
 		try {
+			if(msg.length()<=0) {
+				throw new MoodAnalyzerException("Mood cannot be empty");
+			}
 		if(msg.contains("I am in any mood")) {
 			return "happy";
 		}

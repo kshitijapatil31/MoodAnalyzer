@@ -20,9 +20,9 @@ public class MoodAnalizerTest {
 		MoodAnalizer moodAnalizer=new MoodAnalizer();
 		String mood;
 		try {
-			mood=moodAnalizer.analyseMood(null);
+			mood=moodAnalizer.analyseMood("");
 		}catch(MoodAnalyzerException e) {
-			assertEquals("Mood cannot be null",e.getMessage());
+			assertEquals("Mood cannot be empty",e.getMessage());
 			
 		}
 	}
