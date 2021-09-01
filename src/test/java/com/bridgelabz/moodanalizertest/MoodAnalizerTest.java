@@ -5,6 +5,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import com.bridgelabz.moodanalizer.MoodAnalizer;
+import com.bridgelabz.moodanalizer.MoodAnalyzerException;
+
 
 
 
@@ -12,15 +14,16 @@ import com.bridgelabz.moodanalizer.MoodAnalizer;
 public class MoodAnalizerTest {
 
 	
-	
+
 	@Test
-	public void givenMood_whenhappy_shouldReturnHappy() {
+	public void givenMobile_whenNull_shouldThrowException() {
 		MoodAnalizer moodAnalizer=new MoodAnalizer();
-		
-		String mood=moodAnalizer.analyseMood(null);
-		
-			assertEquals("happy",mood);
-		
+		String mood;
+		try {
+			mood=moodAnalizer.analyseMood(null);
+		}catch(MoodAnalyzerException e) {
+			assertEquals("Mood cannot be null",e.getMessage());
 			
+		}
 	}
 }
