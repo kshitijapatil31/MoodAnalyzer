@@ -8,12 +8,7 @@ import com.bridgelabz.moodanalizer.MoodAnalizer;
 import com.bridgelabz.moodanalizer.MoodAnalyzerException;
 
 
-
-
-
 public class MoodAnalizerTest {
-
-	
 
 	@Test
 	public void givenMobile_whenNull_shouldThrowException() {
